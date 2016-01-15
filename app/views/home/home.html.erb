@@ -1,0 +1,11 @@
+<% if logged_in? %>
+    <div class="pull-right"><%= link_to "LogOut", admin_logout_path, class: "logout_button btn btn-danger" %>
+    </div>
+<% end %>
+<div class="container">
+		<%= image_tag("firstPageLogo.png", alt:"Camille Skubich Jewelry Logo", class: "home_logo") %>
+</div>
+
+<div class="video_div">
+  <iframe class="fullHeight" src="https://player.vimeo.com/video/146656196?autoplay=1&amp;loop=1&amp;color=8D8292&amp;title=0&amp;byline=0&amp;portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>

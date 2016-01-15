@@ -1,0 +1,39 @@
+<div class="container">
+<%= render("shared/logo", title: "My Jewelry") %>
+	<% if logged_in? %>
+		<div class="row">
+			<div class="col-md-6 center"><%= link_to("Edit", edit_jewelry_path(@jewelry), class: "btn btn-info edit_button") %>
+			</div>
+			<div class="col-md-6 center"><%= link_to "delete", delete_jewelry_path(@jewelry), class: "btn btn-info delete_button" %>
+			</div>
+		</div>
+		<hr />
+	<% end %>
+	<div>
+		<%= link_to(image_tag("back_arrow.png", class: "go_back_arrow_pic"), jewelries_path(anchor: @jewelry.name.delete(' '))) %>
+	</div>
+	<div class="center row  show_container">
+		<div class="col-md-6">
+			<%= image_tag(@jewelry.image, class: "jewelry_pic", alt:"Bijoux") %>
+		</div>
+		<div class="col-md-6 jewelry_show_text">
+			<h1 class="title_jewelry"><%= @jewelry.name %></h1>
+			<p class="lead summary_jewelry"><%= @jewelry.summary %></p>
+			<p class="price_jewelry"><%= @jewelry.price %></p>
+			<p class="lead description_jewelry"><%= @jewelry.description %></p>
+			<div class="marginTopMin">
+				<% @jewelries.each do |jewelry| %>
+					<% if @jewelry.collection == jewelry.collection && @jewelry.name != jewelry.name %>
+					
+						<%= link_to(image_tag(jewelry.image.url(:thumb), class: "jewelry_pic_thumb_show"), jewelry_path(jewelry)) %>
+					
+					<% end %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="marginTop"></div>
+
+
+

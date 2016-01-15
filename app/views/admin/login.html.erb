@@ -1,0 +1,16 @@
+<div class="container">
+	<%= render("shared/logo", title: "Admin") %>
+	<div class="row marginTop">
+	    <div class="well col-md-6 col-md-offset-3">
+	        <%= form_tag(:action => 'access') do %>
+	            <%= label_tag :username %>
+	            <%= text_field_tag :username %>
+	            
+	            <%= label_tag :password %>
+	            <%= password_field_tag :password %>
+	            
+	            <%= submit_tag "Login", class: "btn btn-success" %>
+	        <% end %>
+	    </div>
+	</div>
+</div>

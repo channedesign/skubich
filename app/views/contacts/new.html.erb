@@ -1,0 +1,26 @@
+<div class="container">
+<%= render("shared/logo", title: "My Jewelries") %>
+  <div class="contact_form marginTopMinus center">
+
+    <%= simple_form_for @contact, :html => {:class => 'form-inline' } do |f| %>
+      <p>Hi Camille,</p> <br /><span>My name is&nbsp;</span>
+
+      <%= f.input :name, :required => true, label: false, placeholder: "Type Your Name", input_html: { class: 'form_input', id: "name_input" } %>
+
+      <span>and I'd like to&nbsp;</span>
+      <%= f.input :message, :as => :text, :required => true, label: false, placeholder: "Type A Short Message Here", input_html: { class: 'form_input', id: "text_input" } %>
+      <span>.</span> <br /><br />
+      <span>By the way, my email address is&nbsp;</span>
+
+      <%= f.input :email, :required => true, label: false, placeholder: "Type Your Email", input_html: { class: 'form_input', id: "email_input" } %>
+     <span>.</span>
+      <div class= "hidden">
+        <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+      </div>
+      <br />
+      <div>
+        <%= f.button :submit, 'Send', :class => "submit" %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,757 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+/*
+dark-green = #093f35
+dark-purple = #1a0225
+nav-purple = #8D8292
+grey = #e5e5e5
+*/
+
+
+body,html {
+  font-family: Century Gothic, sans-serif !important;
+  overflow-x: hidden;
+}
+
+/*-------------    params/general   --------------*/
+
+.hidden_des {
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.marginTopMinMin {
+  margin-top: 20px;
+}
+
+.marginTop {
+  margin-top: 100px;
+}
+
+.marginBottomMin {
+  margin-bottom: 50px;
+}
+
+.marginTopLogo {
+  margin-top: 10px;
+}
+
+.marginTopMin {
+  margin-top: 50px;
+}
+
+.marginTopMinus {
+    margin-top: -100px;
+}
+
+.marginTopMinus50 {
+    margin-top: -50px;
+}
+
+a {
+  color: #f5f5f5;
+}
+
+a:hover {
+  color: #093f35;
+  text-decoration: none;
+}
+
+/*-------------    nav   --------------*/
+
+.social_div {
+  height: 0;
+  opacity: 0;
+  color: #e5e5e5;
+  position: absolute;
+  bottom:0px;
+  right: 10px;
+}
+
+.social_logo {
+  margin: 0 5px 0 5px;
+}
+
+.nav.navbar-nav li{
+  margin-left: 170px;
+}
+
+.navbar {
+  background-color: #8D8292;
+  border: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #f5f5f5;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #f5f5f5;
+}
+
+.navbar-default .navbar-nav > .active > a, 
+ .navbar-default .navbar-nav > .active > a:hover, 
+ .navbar-default .navbar-nav > .active > a:focus {
+    color: #1a0225;
+    background: white;
+    border-bottom:1px solid white;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+ }
+
+.social_logo_mobile {
+  display:none;
+}
+
+.copy {
+  height: 0;
+  opacity: 0;
+  font-size: 0.8em;
+  position: absolute;
+  bottom: -5px;
+  left: 5px;
+}
+
+.copy_mobile {
+  display: none;
+}
+
+/*-------------    general/logo/title/home   --------------*/
+
+.logo_index {
+  z-index: 500;
+}
+
+.video_div iframe {
+  width: 100%;
+  border: none;
+}
+
+.logo {
+  width: 65px;
+  height: 65px;
+  position: absolute;
+}
+
+.camille {
+  position: relative;
+  left: 70px;
+  top: 0;
+  font-size: 0.9em;
+  font-weight: 800;
+}
+
+.catch_phrase {
+  position: relative;
+  left: 70px;
+  top: -15px;
+  font-size: 0.7em;
+}
+
+.home_logo {
+  width: 100%;
+}
+
+.title_phrase_left {
+  position: relative;
+  left: 240px;
+  top: 60px;
+}
+
+.title_phrase_right {
+  position: relative;
+  right: 240px;
+  top: 60px;
+}
+
+/*-------------    jewelery   --------------*/
+
+#owl-carousel .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*-------------    jewelery/index   --------------*/
+
+.jewelry_pic_list {
+  width: 100%;
+}
+
+/*-------------    jewelery/show   --------------*/
+
+.jewelry_pic {
+  width: 100%;
+}
+
+.jewelry_show_text {
+  margin-top: 200px;
+}
+
+.go_back_arrow_pic {
+  height: 100px;
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  z-index: 500;
+}
+
+/*-------------    Form   --------------*/
+
+input, textarea, select, .uneditable-input {
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+div.picture {
+    margin: 10px 0 20px 0;
+    input {
+        border: 0;
+    }
+
+}
+
+.form_jewelry_pic {
+  margin: 10px 0 10px 0;
+  width: 80px;
+  height: 80px;
+}  
+
+/*.custom-file-input {
+  color: transparent;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Choose a Picture';
+  color: #f5f5f5;
+  display: inline-block;
+  background: #8D8292;
+  border: 1px solid #093f35;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  background:#093f35 ;
+  border-color: #1a0225;
+}
+.custom-file-input:active {
+  outline: 0;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}*/
+
+/*-------------    about   --------------*/
+
+.camille_pic {
+  width: 300px;
+  height: auto;
+  margin-top: 50px;
+}
+
+.shadow:hover{
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(80,80,80,1);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(80,80,80,1);
+  box-shadow: 0px 0px 5px 3px rgba(80,80,80,1);
+}
+
+.floresta_logo {
+  width: 400px;
+  height: 200px;
+}
+
+.vara_logo {
+  width: 350px;
+  height: 150px;
+}
+
+.rebecca_logo {
+  width: 400px;
+}
+
+.renan_logo {
+  width: 400px;
+  height: 150px;
+}
+
+.partner_text {
+  margin: 50px 80px 50px 80px;
+}
+
+.bullet {
+  font-size: 1.5em;
+  position: relative;
+  top: -7px;
+  margin: 3px;
+}
+.color_div {
+  padding: 50px;
+}
+
+.brown {
+  background-color: #988d87;
+}
+
+.grey {
+  background: #d5d5d5;
+}
+
+.dark_grey {
+  background: #c5c5c5;
+}
+
+/*-------------    contact   --------------*/
+
+.contact_form {
+  position: relative;
+  padding-top: 80px;
+  line-height: 48px;
+  font-size: 3em;
+}
+
+.submit {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  position: relative;
+  margin: 53px auto;
+  color: #f5f5f5;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.submit:hover {
+  color: #f5f5f5;
+}
+
+.form-inline div { 
+  display: inline-block; 
+}
+
+.form_input {
+  color: rgba(26,2,37, 0.5);
+  display: inline-block;
+  border: none;
+  border-radius: 0%;
+  border-bottom: 1px dashed #505050;
+  outline: none;
+}
+
+#name_input {
+  width: 340px;
+  min-width: 340px;
+}
+
+#text_input {
+  position: relative;
+  top: 30px;
+  height: 55px;
+  resize: none;
+  width: 600px;
+  min-width: 600px;
+}
+
+#email_input {
+  margin-top: 45px;
+  width: 320px;
+  min-width: 320px;
+}
+
+.field_with_errors {
+  input {
+    border-bottom: 1px solid #b30000 ;
+  }
+}
+
+.error {
+  font-size: 20px;
+  color: #b30000;
+}
+
+.alert {
+  height: 20px;
+  padding-bottom: -18px;
+  background-color: white;
+  border: none;
+}
+
+/*-------------    Admin   --------------*/
+
+.logout_button {
+  color: #f5f5f5;
+}
+
+.btn {
+  background: rgba(9,63,53, 0.8);
+  border: 20px solid rgba(9,63,53, 0.7);
+}
+
+.btn:hover {
+  background: rgba(26,2,37, 0.5);
+  border: 1px solid rgba(26,2,37, 0.7);
+}
+
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*----------------------------------------*/
+
+/*-------------    2880  --------------*/
+
+@media (max-width: 2880px) {
+  .marginTopLogo {
+    margin-top: 350px;
+  }
+  .home_logo {
+    margin-top: 250px;
+  }
+}
+
+/*-------------    2560  --------------*/
+
+@media (max-width: 2560px) {
+  .marginTopLogo {
+    margin-top: 300px;
+  }
+  .home_logo {
+    margin-top: 200px;
+  }
+}
+
+/*-------------    1920  --------------*/
+
+@media (max-width: 1920px) {
+  .marginTopLogo {
+    margin-top: 150px;
+  }
+  .home_logo {
+    margin-top: 150px;
+  }
+}
+
+/*-------------    1444  --------------*/
+
+@media (max-width: 1444px) {
+  .marginTopLogo {
+    margin-top: 100px;
+  }
+  .home_logo {
+    margin-top: 0;
+  }
+  .show_container {
+    margin-top: -100px;
+  }
+}
+
+/*-------------    1281  --------------*/
+
+@media (max-width: 1281px) {
+  .marginTopLogo {
+    margin-top: 50px;
+  }
+  .show_container {
+    margin-top: -60px;
+  }
+  .contact_form {
+    padding-top: 70px;
+    font-size: 2.5em;
+    line-height: 40px
+  }
+  .submit {
+    margin: 40px auto;
+    height: 80px;
+    width: 80px;
+  }
+  .btn {
+    border: 11px solid rgba(9,63,53, 0.7);
+  }
+  #name_input {
+    width: 295px;
+    min-width: 295px;
+  }
+  #text_input {
+    max-height: 46px;
+    width: 480px;
+    min-width: 480px;
+  }
+  #email_input {
+    margin-top: 30px;
+    width: 290px;
+    min-width: 290px;
+  }
+}
+
+/*-------------    1270  --------------*/
+
+@media (max-width: 1270px) {
+  .nav.navbar-nav {
+    padding-left: 90px;
+  }
+  .nav.navbar-nav li{
+    margin-left: 130px;
+  }
+}
+
+/*-------------    1200  --------------*/
+
+@media (max-width: 1200px) {
+  .nav.navbar-nav {
+    padding-left: 50px;
+  }
+}
+
+/*-------------    1140  --------------*/
+
+@media (max-width: 1140px) {
+  .copy {
+    font-size: 0.7em;
+    bottom: -10px;
+  }
+}
+
+/*-------------    1100  --------------*/
+
+@media (max-width: 1100px) {
+  .nav.navbar-nav {
+    padding-left: 130px;
+  }
+  .nav.navbar-nav li{
+    margin-left: 100px;
+  }
+}
+
+
+/*-------------    mobile   --------------*/
+
+@media (max-width: 1000px) {
+  .nav.navbar-nav {
+    padding-left: 130px;
+  }
+  .nav.navbar-nav li{
+    margin-left: 60px;
+  }
+  .contact_form {
+    font-size: 2em;
+    line-height: 30px;
+  }
+  #name_input {
+    width: 240px;
+    min-width: 240px;
+  }
+  #text_input {
+    top: 20px;
+    height: 35px;
+    width:380px;
+    min-width: 380px;
+  }
+  #email_input {
+    margin-top: 25px;
+    width: 230px;
+    min-width: 230px;
+  }
+  .modal-dialog {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav.navbar-nav {
+    padding-left: 100px;
+  }
+  .jewelry_show_text {
+    margin-top: 50px;
+  }
+}
+
+
+@media (max-width: 920px) {
+  .nav.navbar-nav {
+    padding-left: 90px;
+  }
+  .nav.navbar-nav li{
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 870px) {
+  .nav.navbar-nav {
+    padding-left: 150px;
+  }
+  .nav.navbar-nav li{
+    margin-left: 30px;
+  }
+}
+
+@media  (max-width: 767px) {
+  .nav.navbar-nav {
+    padding-left: 0px;
+  }
+  .nav.navbar-nav li{
+    margin: 0;
+    text-align: center;
+  }
+  .copy_mobile {
+    display: block;
+    position: relative;
+    top: 15px;
+    font-size: 0.8em;
+  }
+  .home_title {
+    font-size: 1.2em;
+  }
+  .contact_form {
+    font-size: 1em;
+    line-height: 20px;
+  }
+  .submit {
+    width: 50px;
+    height: 50px;
+    font-size: 0.7em;
+  }
+  .btn {
+    border: 2px solid rgba(9,63,53, 0.7);
+  }
+  #name_input {
+    width: 125px;
+    min-width: 125px;
+  }
+  #text_input {
+    top: 23px;
+    height: 22px;
+    width:200px;
+    min-width: 200px;
+  }
+  #email_input {
+    margin-top: 25px;
+    width: 120px;
+    min-width: 120px;
+  }
+  .jewelry_pic_list {
+    width: 250px;
+    height: 260px;
+  }
+  .jewelry_pic {
+    width: 300px;
+    height: 350px;
+  }
+  .jewelry_show_text {
+    margin-top: 20px;
+  }
+  .social_logo_mobile {
+    display: inline;
+    position: relative;
+    top: 5px;
+    left: 28%;
+    margin: 0 3px 0 3px;
+  }
+  .camille_pic {
+    width: 250px;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  .floresta_logo {
+    height: 150px;
+    width: 330px;
+  }
+  .vara_logo {
+    width: 300px;
+    height: 100px;
+  }
+  .rebecca_logo {
+    width: 300px;
+  }
+  .renan_logo {
+    width: 300px;
+    height: 130px;
+  }
+  .partner_text {
+    margin: 20px 30px 20px 30px;
+  }
+  .bullet {
+    font-size: 1.5em;
+    position: relative;
+    top: -7px;
+    margin: 3px;
+  }
+  .color_div {
+    padding: 30px 0 30px 0;
+  }
+  .go_back_arrow_pic {
+    position: fixed;
+  }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .home_logo {
+    margin-top: 150px;
+  }
+  .marginTopLogo {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 370px) {
+  .social_logo_mobile {
+    display: inline;
+    position: relative;
+    top: 5px;
+    left: 26%;
+  }
+}
+
+/*-----------------    1400/Landscape    ------------------*/
+
+@media only screen 
+  and (min-device-width: 1000px) 
+  and (max-device-width: 1400px)
+  and (-webkit-min-device-pixel-ratio: 2) 
+  and (orientation: landscape)  {
+  #name_input {
+    width: 355px;
+    min-width: 355px;
+  }
+  #email_input {;
+    width: 355px;
+    min-width: 355px;
+  }
+}
+
+  /*-----------------    1400/portrait    ------------------*/
+
+@media only screen 
+  and (min-device-width: 1000px) 
+  and (max-device-width: 1400px)
+  and (-webkit-min-device-pixel-ratio: 2) 
+  and (orientation: portrait)  {
+  .marginTopLogo {
+    margin-top: 200px;
+  }
+  .home_logo {
+    margin-top: 150px;
+  }
+}
+
