@@ -9,5 +9,10 @@ class Jewelry < ActiveRecord::Base
   	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   	has_attached_file :image_modal
   	validates_attachment_content_type :image_modal, content_type: /\Aimage\/.*\Z/
+
+  	def image_url
+  		self.image.url(:medium)
+  	end
+
 end
  

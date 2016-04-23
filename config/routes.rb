@@ -14,11 +14,11 @@ Rails.application.routes.draw do
   get "contacts/", to: "contacts#new"
   resources "contacts", only: [:new, :create]
 
-  resources :jewelries do 
-        member do
-            get 'delete'
-        end
-    end
+  resources :jewelries
+        # member do
+        #     get 'delete'
+        # end
+    # end
 
   root "home#home" 
   # The priority is based upon order of creation: first created -> highest priority.
