@@ -502,6 +502,9 @@ div.picture {
   -webkit-border-radius: 10px 10px 10px 10px;
 }
 
+.visible {
+  background-color: rgba(9, 103, 53, 0.1);
+}
 
 /*----------------------------------------*/
 /*----------------------------------------*/
@@ -793,6 +796,7 @@ div.picture {
   }
   .go_back_arrow_pic {
     position: fixed;
+    height: 50px;
   }
 }
 

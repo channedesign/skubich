@@ -1,3 +1,16 @@
-<div class="col-sm-4 marginBottomMin" ng-repeat="jewelry in jewelries" id="{{jewelry.id}}">
-	<a href="" ng-click="jewelryShow(jewelry.id)"><img ng-src="{{jewelry.image_url}}" /></a>
-</div>
+<!-- <div class="row">
+	<div class="col-sm-3">
+		<select class="form-control form-control-sm" ng-model="organizeJewelries">
+			<option value="" selected>All Jewelry Type</option>
+		  	<option value="bracelet">Bracelets</option>
+		  	<option value="ring">Rings</option>
+		  	<option value="necklace">Necklaces</option>
+		  	<option value="earring">Earrings</option>
+		</select>
+	</div>
+</div>	 -->
+<div class="row text-center">	
+	<div class="col-md-4 marginBottomMin organizeJewelries" ng-repeat="jewelry in jewelries | filter: organizeJewelries" id="{{jewelry.id}}" ng-if="jewelry.visible == true">
+		<a href="" ng-click="jewelryShow(jewelry.id)"><img ng-src="{{jewelry.image_url}}" /></a>
+	</div>
+</div>	

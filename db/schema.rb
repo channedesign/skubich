@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160425210146) do
+ActiveRecord::Schema.define(version: 20160428160233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20160425210146) do
     t.integer  "image_modal_file_size"
     t.datetime "image_modal_updated_at"
     t.string   "collection"
+    t.boolean  "visible"
   end
 
 end

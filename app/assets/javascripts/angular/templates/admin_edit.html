@@ -20,6 +20,9 @@
 	    	<label for="summary">Material:</label>
 	    	<textarea type="text" class="form-control" id="description" rows="5" ng-model="jewelry.summary" ></textarea>
 	  	</div>
+	  	<div class="checkbox">
+    		<label><input type="checkbox" ng-model="jewelry.visible"><span ng-show="jewelry.visible == nil || jewelry.visible == false">Show on website</span><span ng-show="jewelry.visible == true">Now every one can see <strong>{{jewelry.name}}</strong>!</span></label>
+  		</div>
 	  	<button type="submit" class="btn btn-default">Submit</button>
 	</form>
 </div>
