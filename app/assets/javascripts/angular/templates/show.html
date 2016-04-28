@@ -7,7 +7,7 @@
 	<p class="lead description_jewelry">{{jewelryShow.description}}</p>
 	<p class="lead summary_jewelry">{{jewelryShow.summary}}</p>
 	
-	<div class="marginTopMin marginBottomMin">		
+	<div class="marginTopMin marginBottom">		
 		<a href="" ng-click="jewelryNext(jewelry.id)" ng-repeat="jewelry in jewelries" ng-if="jewelryShow.collection == jewelry.collection && jewelryShow.name != jewelry.name" class="list-in"><img  ng-src="{{jewelry.image_url_min}}" alt="Jewelry Collections" class="jewelry_pic_thumb_show" /></a>
 	</div>
 </div>

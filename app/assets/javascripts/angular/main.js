@@ -29,10 +29,10 @@
     		if ($location.hash()) {
     			$timeout(function() {
 		            
-		            
+		            $location.hash();
 		            $anchorScroll();
 		            
-		        });
+		        }, 100);
     		} 
     		
   		});
