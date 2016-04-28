@@ -32,7 +32,7 @@
 		            $location.hash();
 		            $anchorScroll();
 		            
-		        }, 400);
+		        }, 500);
     		} 
     		
   		});
