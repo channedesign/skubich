@@ -1,24 +1,22 @@
 Rails.application.routes.draw do
 
   
+  
+  
   get "about/index"
-
-  post 'admin/access'
-
-  get 'admin/login'
-
-  get 'admin/logout'
-
-  get "admin", to: "admin#login"
+  get "admins", to: 'admins#index'
+  get 'admins/sign_up', to: 'admins#index'
+  devise_for :admins
 
   get "contacts/", to: "contacts#new"
   resources "contacts", only: [:new, :create]
 
-  resources :jewelries
+  resources :jewelries do
+      collection { post :sort }
         # member do
         #     get 'delete'
         # end
-    # end
+  end
 
   root "home#home" 
   # The priority is based upon order of creation: first created -> highest priority.

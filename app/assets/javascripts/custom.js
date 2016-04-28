@@ -45,21 +45,8 @@ $(document).ready(function() {
 	}, function() {
 		$tm.to(this, 0.3, {scale: 1});
 	});
-
 	
-	// Show Animation
-	var title = $(".title_jewelry"),
-		summary = $(".summary_jewelry"),
-		description = $(".description_jewelry"),
-		pic = $(".jewelry_pic");
-		backArrow = $(".go_back_arrow_pic")
-		thumbPicShow = $(".jewelry_pic_thumb_show")
-	$tm.from(pic, 0.5, {x: -1500});
-	$tm.staggerFrom([title, summary, description], 0.5, {x: 1500 }, 0.4);
-	$tm.from(backArrow, 2, { opacity: 0, delay: 1});
-	$tm.staggerFrom( thumbPicShow, 1, { opacity: 0, scale: 0, delay:1 }, 0.2);
-
-
+	
 
 
 	// Auto-resize contact form

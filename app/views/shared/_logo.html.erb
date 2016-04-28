@@ -2,15 +2,11 @@
 	<%= link_to(image_tag("logo.jpg", alt: "Logo Skubich", class: "logo logo_index"), root_path) %>
 	<h1 class="camille logo_index">Camille Skubich Jewelry</h1>
 	<h2 class="catch_phrase logo_index">Wear your character</h2>
-	<% if logged_in? %>
-    <div class="pull-right"><%= link_to "LogOut", admin_logout_path, class: "logout_button btn btn-danger" %>
-    </div>
-  <% end %>
+	
 </div>
-<% if current_page?(jewelries_path) || current_page?(about_index_path) %>
-	<div class="marginTopMin"></div>
-<% else %>
-	<div class="marginTopLogo"></div>
+<% if current_admin %>
+     <%= link_to('Admin', admins_path, class: 'admins_link black') %> 
+     <%= link_to('LogOut', destroy_admin_session_path, class: 'admins_log_out black', method: :delete) %>     
 <% end %>
 
 

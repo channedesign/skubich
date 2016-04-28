@@ -14,5 +14,13 @@ class Jewelry < ActiveRecord::Base
   		self.image.url(:medium)
   	end
 
+    def image_url_min
+      self.image.url(:thumb)
+    end
+
+    def image_url_og
+      self.image.url()
+    end
+
 end
  

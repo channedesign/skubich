@@ -1,0 +1,48 @@
+<div class="col-sm-12">
+	<h1>Welcome Camille</h1>
+	<a href="/jewelries" class="black">Back to Website</a>
+	|
+	<a href="" ng-click="logout()" class="black">Log Out</a>
+</div>
+<div class="col-sm-6 col-sm-offset-3 marginTopMinMin">
+	<form novalidate role="form" name="jewelry_form" ng-submit="addJewelry()" ng-show="showJewelryForm" class="formAnim">
+	  	<div class="form-group">
+	    	<label for="name">Name:</label>
+	    	<input type="text" class="form-control" id="name" ng-model="newJewelry.name" required>
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="description">Inspiration:</label>
+	    	<input type="text" class="form-control" id="description" ng-model="newJewelry.description" required>
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="collection">Collection:</label>
+	    	<input type="text" class="form-control" id="description" ng-model="newJewelry.collection" required>
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="summary">Material:</label>
+	    	<textarea type="text" class="form-control" id="description" rows="5" ng-model="newJewelry.summary" required></textarea>
+	  	</div>
+	  	<button type="submit" class="btn btn-default" ng-disabled="jewelry_form.$invalid">Submit</button>
+	  	<a href="" ng-click="cancel()" class="black">Cancel</a>
+	</form>
+	<button class='btn btn-default marginBottomMin' ng-click="showJewelryForm = true" ng-hide="showJewelryForm"><i class="fa fa-plus fa-4x" aria-hidden="true"></i><br>Add New Jewelry</button>
+</div>
+<label>Search: <input ng-model="searchText"></label>
+<div ui-sortable="sorting" ng-model="jewelries">
+	<div class="col-sm-4 admin_jewelries_index shadow_anim marginBottomMin" ng-repeat="jewelry in jewelries | filter:searchText" id="jewelry_{{jewelry.id}}">
+		<h3>{{jewelry.name}}</h3>
+		<div ng-show="$file.progress >= 0 && compressionFinished != false" >
+			<div class="progress">
+		        <div style="width:{{$file.progress}}%" ng-bind="$file.progress + '%'"></div>
+		    </div>
+		    <div class='uil-spin-css' style='-webkit-transform:scale(0.14)'><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div>
+	    </div><br>
+
+		<img ng-src="{{jewelry.image_url_min}}" alt="Add a Picture Here" ngf-select="uploadImage($file, jewelry)" ng-model="$file" class="admin_index_pic" />
+		<p class="text-left"><strong>Inspiration:</strong> {{jewelry.description}}</p>
+		<p class="text-left"><strong>Collection:</strong> {{jewelry.collection}}</p>
+		<p class="text-left"><strong>Material:</strong> {{jewelry.summary}}</p>
+		<button class="btn btn-default" ng-click="editJewelry(jewelry.id)"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;Edit</button>
+		<button class="btn btn-danger" ng-click="deleteJewelry($index)"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete</a>
+	</div>
+</div>

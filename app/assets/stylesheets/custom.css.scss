@@ -63,6 +63,15 @@ a:hover {
   text-decoration: none;
 }
 
+.black {
+  color: black;
+}
+
+.black:hover {
+  color: #093f35;
+  text-decoration: underline;
+}
+
 /*-------------    nav   --------------*/
 
 .social_div {
@@ -202,6 +211,11 @@ a:hover {
   z-index: 500;
 }
 
+.jewelry_pic_thumb_show {
+  width: 100px;
+  height: 100px;
+}
+
 /*-------------    Form   --------------*/
 
 input, textarea, select, .uneditable-input {
@@ -225,37 +239,6 @@ div.picture {
   height: 80px;
 }  
 
-/*.custom-file-input {
-  color: transparent;
-}
-.custom-file-input::-webkit-file-upload-button {
-  visibility: hidden;
-}
-.custom-file-input::before {
-  content: 'Choose a Picture';
-  color: #f5f5f5;
-  display: inline-block;
-  background: #8D8292;
-  border: 1px solid #093f35;
-  border-radius: 3px;
-  padding: 5px 8px;
-  outline: none;
-  white-space: nowrap;
-  -webkit-user-select: none;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 10pt;
-}
-.custom-file-input:hover::before {
-  background:#093f35 ;
-  border-color: #1a0225;
-}
-.custom-file-input:active {
-  outline: 0;
-}
-.custom-file-input:active::before {
-  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
-}*/
 
 /*-------------    about   --------------*/
 
@@ -345,6 +328,16 @@ div.picture {
   color: #f5f5f5;
 }
 
+.contact_form .btn {
+  background: rgba(9,63,53, 0.8);
+  border: 20px solid rgba(9,63,53, 0.7);
+}
+
+.contact_form .btn:hover {
+  background: rgba(26,2,37, 0.5);
+  border: 1px solid rgba(26,2,37, 0.7);
+}
+
 .form-inline div { 
   display: inline-block; 
 }
@@ -396,21 +389,119 @@ div.picture {
   border: none;
 }
 
+/*-------------    Devise/Login   --------------*/
+
+.login_div {
+  padding: 20px;
+  border: 1px dashed #1a0225;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  a {
+    color: grey;
+  }
+  a:hover {
+    color: black;
+  }
+}
+
 /*-------------    Admin   --------------*/
 
 .logout_button {
   color: #f5f5f5;
 }
 
-.btn {
+.btn-default {
   background: rgba(9,63,53, 0.8);
-  border: 20px solid rgba(9,63,53, 0.7);
+  border: 1px solid rgba(9,63,53, 0.7);
 }
 
-.btn:hover {
+.btn-danger {
+  background-color: rgba(200, 0, 0, 0.3);
+}
+
+.btn-default:hover {
   background: rgba(26,2,37, 0.5);
   border: 1px solid rgba(26,2,37, 0.7);
 }
+
+.admin_index_pic:hover {
+  cursor: pointer;
+}
+
+.admin_jewelries_index {
+  position: relative;
+  background-color: white;
+  min-height: 370px;
+  padding: 10px;
+  border: 1px dashed black;
+  .uil-spin-css {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+  }
+}
+
+.shadow_anim {
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+  
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.shadow_anim:hover {
+  -webkit-box-shadow: -5px -3px 5px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: -5px -3px 5px 3px rgba(0,0,0,0.3);
+  box-shadow: -5px -3px 5px 3px rgba(0,0,0,0.3);
+}
+
+.progress {
+  line-height: 15px;
+}
+
+.progress {
+  display: inline-block;
+  width: 100px;
+  border: 3px solid #CCC;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.progress div {
+    font-size: smaller;
+    background: green;
+    width: 0;
+}
+
+.admins_link {
+  position: absolute;
+  top: 20px;
+  right: 180px;
+}
+
+.admins_log_out {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+}
+
+.ng-invalid.ng-dirty {
+  border-color: red;
+}
+
+.ng-valid.ng-dirty {
+  border-color: green;
+}
+
+.preview_box {
+  border: 1px dashed black;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+}
+
 
 /*----------------------------------------*/
 /*----------------------------------------*/

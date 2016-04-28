@@ -47,6 +47,8 @@ gem 'rack-cache'
 gem 'angularjs-rails'
 gem 'angular-rails-templates'
 gem 'responders', '~> 2.0'
+gem 'devise'
+gem 'jquery-ui-rails'
 
 
 gem 'rails_12factor', group: :production

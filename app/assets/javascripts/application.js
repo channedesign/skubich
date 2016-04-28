@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require jquery.elevateZoom-3.0.8.min
@@ -18,5 +19,7 @@
 //= require angular
 //= require angular-route
 //= require angular-resource
+//= require angular-animate
 //= require angular-rails-templates
+//= require angular/ng-file-upload-all
 //= require_tree .

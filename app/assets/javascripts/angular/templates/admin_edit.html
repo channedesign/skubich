@@ -1,0 +1,34 @@
+<div class="col-sm-12">
+	<h1>Edit {{jewelry.name}}</h1>
+	<img ng-src="{{jewelry.image_url_min}}" alt="{{jewelry.name}} Picture" />
+</div>
+<div class="col-sm-6">
+	<form novalidate role="form" name="jewelry_form" ng-submit="updateJewelry($index)">
+	  	<div class="form-group">
+	    	<label for="name">Name:</label>
+	    	<input type="text" class="form-control" id="name" ng-model="jewelry.name" >
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="description">Inspiration:</label>
+	    	<input type="text" class="form-control" id="description" ng-model="jewelry.description" >
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="collection">Collection:</label>
+	    	<input type="text" class="form-control" id="description" ng-model="jewelry.collection" >
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="summary">Material:</label>
+	    	<textarea type="text" class="form-control" id="description" rows="5" ng-model="jewelry.summary" ></textarea>
+	  	</div>
+	  	<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+</div>
+<div class="col-sm-6">
+	<p class="muted">Text Preview:</p>
+	<br><br>
+	<div class="preview_box">
+		<h1 class="title_jewelry">{{jewelry.name}}</h1>
+		<p class="lead description_jewelry">{{jewelry.description}}</p>
+		<p class="lead summary_jewelry">{{jewelry.summary}}</p>
+	</div>
+</div>
