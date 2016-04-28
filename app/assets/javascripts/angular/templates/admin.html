@@ -42,9 +42,9 @@
 	    </div><br>
 
 		<img ng-src="{{jewelry.image_url_min}}" alt="Add a Picture Here" ngf-select="uploadImage($file, jewelry)" ng-model="$file" class="admin_index_pic" />
-		<p class="text-left"><strong>Inspiration:</strong> {{jewelry.description}}</p>
+		<p class="text-left"><strong>Inspiration:</strong> {{jewelry.summary}}</p>
 		<p class="text-left"><strong>Collection:</strong> {{jewelry.collection}}</p>
-		<p class="text-left"><strong>Material:</strong> {{jewelry.summary}}</p>
+		<p class="text-left"><strong>Material:</strong> {{jewelry.description}}</p>
 		<button class="btn btn-default" ng-click="editJewelry(jewelry.id)"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;Edit</button>
 		<button class="btn btn-danger" ng-click="deleteJewelry($index)"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete</a>
 	</div>
