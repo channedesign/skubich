@@ -10,7 +10,7 @@
 	</div>
 </div>	 -->
 <div class="row text-center">	
-	<div class="col-md-4 marginBottomMin organizeJewelries" ng-repeat="jewelry in jewelries | filter: organizeJewelries" id="{{jewelry.id}}" ng-if="jewelry.visible == true">
+	<div class="col-md-4 marginBottomMin organizeJewelries" ng-repeat="jewelry in jewelries" id="{{jewelry.id}}" ng-if="jewelry.visible == true">
 		<a href="" ng-click="jewelryShow(jewelry.id)"><img ng-src="{{jewelry.image_url}}" /></a>
 	</div>
 </div>	
