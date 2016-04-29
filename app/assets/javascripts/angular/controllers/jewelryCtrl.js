@@ -34,16 +34,16 @@
 			$location.url('/'+ id );
 		}	
 	}])
-	.animation('.list-in', [function() {
-		return {
-			enter: function(element, doneFn) {
-				TweenMax.staggerFrom([element[0]], 1, { opacity: 0, scale: 0, delay: 1 }, 0.2);
-			}, 
-			leave: function(element, doneFn) {
-				// TweenMax.staggerFrom(element, 1, { opacity: 1, scale: 1, delay:0, onComplete: doneFn }, 0.2);
-			}
-		}
-	}]);
+	// .animation('.list-in', [function() {
+	// 	return {
+	// 		enter: function(element, doneFn) {
+	// 			TweenMax.staggerFrom([element[0]], 1, { opacity: 0, scale: 0, delay: 1 }, 0.2);
+	// 		}, 
+	// 		leave: function(element, doneFn) {
+	// 			// TweenMax.staggerFrom(element, 1, { opacity: 1, scale: 1, delay:0, onComplete: doneFn }, 0.2);
+	// 		}
+	// 	}
+	// }]);
 
 
 
