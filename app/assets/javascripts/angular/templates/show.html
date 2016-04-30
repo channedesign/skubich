@@ -3,9 +3,7 @@
 	<img  ng-src="{{jewelryShow.image_url_og}}" alt="{{jewelryShow.image_file_name}}" class="jewelry_pic" />
 </div>
 <div class="col-sm-6 text-center jewelry_show_text" animate-from-right>
-	<h1 class="title_jewelry">{{jewelryShow.name}}</h1>
-	<p class="lead summary_jewelry">{{jewelryShow.summary}}</p>
-	<p class="lead description_jewelry">{{jewelryShow.description}}</p>
+	<jewelry-show-text value="jewelryShow"></jewelry-show-text>
 	
 	<div class="marginTopMin marginBottom">		
 		<a href="" ng-click="jewelryNext(jewelry.id)" ng-repeat="jewelry in jewelries" ng-if="jewelryShow.collection == jewelry.collection && jewelryShow.name != jewelry.name" class="list-in"><img  ng-src="{{jewelry.image_url_min}}" alt="Jewelry Collections" class="jewelry_pic_thumb_show" /></a>

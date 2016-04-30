@@ -1,0 +1,21 @@
+<div class="form-group">
+	<label for="name">Name:</label>
+	<input type="text" class="form-control" id="name" ng-model="value.name" required>
+</div>
+<div class="form-group">
+	<label for="summary">Inspiration:</label>
+	<input type="text" class="form-control" id="summary" ng-model="value.summary" required>
+</div>
+<div class="form-group">
+	<label for="collection">Collection:</label>
+	<input type="text" class="form-control" id="collection" ng-model="value.collection" required>
+</div>
+<div class="form-group">
+	<label for="description">Material:</label>
+	<textarea type="text" class="form-control" id="description" rows="5" ng-model="value.description" required></textarea>
+</div>
+<div class="checkbox">
+	<label><input type="checkbox" ng-model="value.visible"> <span ng-show="value.visible == nil || value.visible == false">Show on website</span><span ng-show="value.visible == true">Every one will be able to see <strong>{{value.name}}</strong></span></label>
+</div>
+
+		

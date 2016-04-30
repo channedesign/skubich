@@ -5,7 +5,8 @@
 			'templates',
 			'JewelryController',
 			'JewelryServices', 
-			'JewelryDirective'
+			'JewelryDirective',
+			'AdminDirective'
 		]);
 
 
@@ -28,10 +29,8 @@
 	  	$rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
     		if ($location.hash()) {
     			$timeout(function() {
-		            
 		            $location.hash();
 		            $anchorScroll();
-		            
 		        }, 450);
     		} 
     		
@@ -49,7 +48,8 @@
 			'templates',
 			'AdminController',
 			'AdminServices',
-			'ui.sortable'
+			'ui.sortable',
+			'AdminDirective'
 		]);
 
 	adminApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {

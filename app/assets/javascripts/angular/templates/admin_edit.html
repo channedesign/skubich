@@ -4,34 +4,14 @@
 </div>
 <div class="col-sm-6">
 	<form novalidate role="form" name="jewelry_form" ng-submit="updateJewelry($index)">
-	  	<div class="form-group">
-	    	<label for="name">Name:</label>
-	    	<input type="text" class="form-control" id="name" ng-model="jewelry.name" >
-	  	</div>
-	  	<div class="form-group">
-	    	<label for="description">Inspiration:</label>
-	    	<input type="text" class="form-control" id="description" ng-model="jewelry.summary" >
-	  	</div>
-	  	<div class="form-group">
-	    	<label for="collection">Collection:</label>
-	    	<input type="text" class="form-control" id="description" ng-model="jewelry.collection" >
-	  	</div>
-	  	<div class="form-group">
-	    	<label for="summary">Material:</label>
-	    	<textarea type="text" class="form-control" id="description" rows="5" ng-model="jewelry.description" ></textarea>
-	  	</div>
-	  	<div class="checkbox">
-    		<label><input type="checkbox" ng-model="jewelry.visible"><span ng-show="jewelry.visible == nil || jewelry.visible == false">Show on website</span><span ng-show="jewelry.visible == true">Now every one can see <strong>{{jewelry.name}}</strong>!</span></label>
-  		</div>
-	  	<button type="submit" class="btn btn-default">Submit</button>
+	  	<form-admin value="jewelry"></form-admin>
+	  	<button type="submit" class="btn btn-default" ng-disabled="jewelry_form.$invalid">Submit</button>
 	</form>
 </div>
 <div class="col-sm-6">
 	<p class="muted">Text Preview:</p>
 	<br><br>
 	<div class="preview_box">
-		<h1 class="title_jewelry">{{jewelry.name}}</h1>
-		<p class="lead description_jewelry">{{jewelry.description}}</p>
-		<p class="lead summary_jewelry">{{jewelry.summary}}</p>
+		<jewelry-show-text value="jewelry"></jewelry-show-text>
 	</div>
 </div>

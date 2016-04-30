@@ -13,11 +13,11 @@ adminController.controller('adminCtrl', ['$scope', '$location', '$http', 'Admin'
 
 	$scope.addJewelry = function() {
 		$http.post('/jewelries.json', $scope.newJewelry).then(function(resp) {
-			$scope.jewelries.push($scope.newJewelry);
-			$scope.newJewelry = {};
 			$http.get('/jewelries/'+ resp.data.id +'.json').then(function(resp) {
 	    		$scope.jewelries[$scope.jewelries.length-1] = resp.data;
 	    	});
+	    	$scope.jewelries.push($scope.newJewelry);
+			$scope.newJewelry = {};
 		})
 		$scope.showJewelryForm = false;
 	}
@@ -32,8 +32,12 @@ adminController.controller('adminCtrl', ['$scope', '$location', '$http', 'Admin'
 	}
 
 	$scope.deleteJewelry = function(index) {
-		$scope.jewelries[index].$delete();
-		$scope.jewelries.splice(index, 1);
+		$scope.compressionFinished = true;
+		var id = $scope.jewelries[index].id;
+		$http.delete('/jewelries/'+ id +'.json').then(function(resp) {
+			$scope.jewelries.splice(index, 1);
+			$scope.compressionFinished = false;
+		})
 	}
 
 	$scope.sorting = {

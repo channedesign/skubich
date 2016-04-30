@@ -6,26 +6,8 @@
 </div>
 <div class="col-sm-6 col-sm-offset-3 marginTopMinMin">
 	<form novalidate role="form" name="jewelry_form" ng-submit="addJewelry()" ng-show="showJewelryForm" class="formAnim">
-	  	<div class="form-group">
-	    	<label for="name">Name:</label>
-	    	<input type="text" class="form-control" id="name" ng-model="newJewelry.name" required>
-	  	</div>
-	  	<div class="form-group">
-	    	<label for="description">Inspiration:</label>
-	    	<input type="text" class="form-control" id="description" ng-model="newJewelry.summary" required>
-	  	</div>
-	  	<div class="form-group">
-	    	<label for="collection">Collection:</label>
-	    	<input type="text" class="form-control" id="description" ng-model="newJewelry.collection" required>
-	  	</div>
-	  	<div class="form-group">
-	    	<label for="summary">Material:</label>
-	    	<textarea type="text" class="form-control" id="description" rows="5" ng-model="newJewelry.description" required></textarea>
-	  	</div>
-	  	<div class="checkbox">
-    		<label><input type="checkbox" ng-model="newJewelry.visible"> <span ng-show="newJewelry.visible == nil || newJewelry.visible == false">Show on website</span><span ng-show="newJewelry.visible == true">Every one will be able to see <strong>{{newJewelry.name}}</strong></span></label>
-  		</div>
-	  	<button type="submit" class="btn btn-default" ng-disabled="jewelry_form.$invalid">Submit</button>
+		<form-admin value="newJewelry"></form-admin>
+		<button type="submit" class="btn btn-default" ng-disabled="jewelry_form.$invalid">Submit</button>
 	  	<a href="" ng-click="cancel()" class="black">Cancel</a>
 	</form>
 	<button class='btn btn-default marginBottomMin' ng-click="showJewelryForm = true" ng-hide="showJewelryForm"><i class="fa fa-plus fa-4x" aria-hidden="true"></i><br>Add New Jewelry</button>
@@ -35,9 +17,9 @@
 	<div class="col-sm-4 admin_jewelries_index shadow_anim marginBottomMin" ng-repeat="jewelry in jewelries | filter:searchText" id="jewelry_{{jewelry.id}}" ng-class="{visible: jewelry.visible == true}">
 		<h3>{{jewelry.name}}</h3>
 		<div ng-show="$file.progress >= 0 && compressionFinished != false" >
-			<div class="progress">
+			<!-- <div class="progress">
 		        <div style="width:{{$file.progress}}%" ng-bind="$file.progress + '%'"></div>
-		    </div>
+		    </div> -->
 		    <div class='uil-spin-css' style='-webkit-transform:scale(0.14)'><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div>
 	    </div><br>
 
