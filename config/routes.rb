@@ -13,9 +13,6 @@ Rails.application.routes.draw do
 
   resources :jewelries do
       collection { post :sort }
-        # member do
-        #     get 'delete'
-        # end
   end
 
   root "home#home" 

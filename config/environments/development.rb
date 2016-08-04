@@ -29,13 +29,12 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
 
   config.action_mailer.smtp_settings = {
-  address: "smtp.gmail.com",
+  address: "email-smtp.us-west-2.amazonaws.com",
   port: 587,
-  domain: ENV["GMAIL_DOMAIN"],
   authentication: "plain",
   enable_starttls_auto: true,
-  user_name: ENV["GMAIL_USERNAME"],
-  password: ENV["GMAIL_PASSWORD"]
+  user_name: ENV["AWS_SES_USERNAME"],
+  password: ENV["AWS_SES_PASSWORD"]
   }
 
   # Print deprecation notices to the Rails logger.
